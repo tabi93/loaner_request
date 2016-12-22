@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_77442_loaner_req_loaner_request">u_depot=other^EQ<item endquery="false" field="u_depot" goto="false" newquery="false" operator="=" or="false" value="other"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+	g_form.hideAllFieldMsgs();
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+	g_form.showFieldMsg('u_other','Where will you pick up the loaner?', 'info');
+}]]></script_true>
+        <set_values/>
+        <short_description>Make Other field visible and mandatory</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-12-22 07:30:08</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4e9362d24fb722005deb7e918110c7bc</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Make Other field visible and mandatory</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Loaner Request" source="x_77442_loaner_req">ea8149b94ff722005deb7e918110c705</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Loaner Request">ea8149b94ff722005deb7e918110c705</sys_scope>
+        <sys_update_name>sys_ui_policy_4e9362d24fb722005deb7e918110c7bc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-12-22 07:44:51</sys_updated_on>
+        <table>x_77442_loaner_req_loaner_request</table>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>
