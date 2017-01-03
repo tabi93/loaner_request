@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>x_77442_loaner_req_loaner_request_script_1</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+    
+    if (current.u_item_type == "cmdb_ci_computer"){
+        var query = current.cmdb_ci.getDisplayValue();
+        var request = new sn_ws.RESTMessageV2();
+        request.setEndpoint('https://dev24595.service-now.com/api/now/table/u_password_value?sysparm_query='+query+'&sysparm_fields=u_password&sysparm_limit=10');
+        request.setHttpMethod('GET');
+        
+        //Eg. UserName="admin", Password="admin" for this code sample.
+        var user = 'admin';
+        var password = 'Abc1234@';
+        
+        request.setBasicAuth(user,password);
+        request.setRequestHeader("Accept","application/json");
+        
+        var response = request.execute();
+        gs.info(response.getBody());
+        var obj = new global.JSON().decode(response.getBody());
+        var myPass = obj.result[0].u_password;
+        gs.info("u_password: " + myPass);
+    }
+    
+    
+})(current, previous);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-01-03 11:45:38</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>7f911d124f8032005deb7e918110c701</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_77442_loaner_req_loaner_request_script_1</sys_name>
+        <sys_package display_value="Loaner Request" source="x_77442_loaner_req">ea8149b94ff722005deb7e918110c705</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Loaner Request">ea8149b94ff722005deb7e918110c705</sys_scope>
+        <sys_update_name>sys_script_email_7f911d124f8032005deb7e918110c701</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-01-03 11:45:38</sys_updated_on>
+    </sys_script_email>
+</record_update>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="cmdb_ci_hardware" label="Mobile Device" max_length="40" name="x_77442_loaner_req_mobile_vice" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="3" default="sc" label="Depot" max_length="40" name="u_depot" type="string">
+            <choice>
+                <element label="New York" sequence="0" value="ny"/>
+                <element label="London" sequence="1" value="london"/>
+                <element label="Buenos Aires" sequence="2" value="ba"/>
+                <element label="Santa Clara" sequence="3" value="sc"/>
+                <element label="Singapore" sequence="4" value="singapore"/>
+                <element label="Sydney" sequence="5" value="sydney"/>
+                <element label="Other" sequence="6" value="other"/>
+            </choice>
+        </element>
+        <element label="Loaner" max_length="40" name="u_loaner" type="boolean"/>
+    </element>
+</database>

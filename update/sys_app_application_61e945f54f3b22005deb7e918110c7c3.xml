@@ -8,15 +8,15 @@
         <hint/>
         <name>Loaner Request</name>
         <order>100</order>
-        <roles>x_77442_loaner_req.loaner_request_user</roles>
+        <roles>x_77442_loaner_req.loaner_request_user,x_77442_loaner_req.admin</roles>
         <sys_class_name>sys_app_application</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2016-12-20 11:39:13</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
+        <sys_customer_update>true</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>61e945f54f3b22005deb7e918110c7c3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Loaner Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="Loaner Request" source="x_77442_loaner_req">ea8149b94ff722005deb7e918110c705</sys_package>
@@ -25,7 +25,7 @@
         <sys_scope display_value="Loaner Request">ea8149b94ff722005deb7e918110c705</sys_scope>
         <sys_update_name>sys_app_application_61e945f54f3b22005deb7e918110c7c3</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-12-20 11:39:13</sys_updated_on>
+        <sys_updated_on>2016-12-22 09:16:23</sys_updated_on>
         <title>Loaner Request</title>
         <view_name/>
     </sys_app_application>
